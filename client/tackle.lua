@@ -1,3 +1,17 @@
+
+RegisterKeyMapping('tackle', 'Tackle', 'KEYBOARD', 'X')
+
+RegisterCommand('tackle', function()
+    if QBCore ~= nil then
+        local ped = PlayerPedId()
+        if not IsPedInAnyVehicle(ped, false) and GetEntitySpeed(ped) > 2.5 then
+            Tackle()
+        end
+    else
+        Wait(250)
+    end
+end, false)
+
 CreateThread(function()
     while true do 
         if QBCore ~= nil then

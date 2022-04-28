@@ -71,7 +71,7 @@ CreateThread(function()
 				DisableControlAction(1, 142, true)
 			end
 
-			if weapon == `WEAPON_FIREEXTINGUISHER`
+			if weapon == `WEAPON_FIREEXTINGUISHER` then
 				if IsPedShooting(ped) then
 					SetPedInfiniteAmmo(ped, true, `WEAPON_FIREEXTINGUISHER`)
 				end
